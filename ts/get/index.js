@@ -1,9 +1,8 @@
-function get(obj, path, defaultValue) {
-    if (defaultValue === void 0) { defaultValue = undefined; }
-    var currentLevel = obj;
-    var pathsArray = path.split('.');
-    for (var _i = 0, pathsArray_1 = pathsArray; _i < pathsArray_1.length; _i++) {
-        var key = pathsArray_1[_i];
+"use strict";
+function get(obj, path, defaultValue = undefined) {
+    let currentLevel = obj;
+    const pathsArray = path.split('.');
+    for (const key of pathsArray) {
         if (currentLevel.hasOwnProperty(key)) {
             currentLevel = currentLevel[key];
         }
@@ -14,7 +13,7 @@ function get(obj, path, defaultValue) {
     }
     return currentLevel;
 }
-var obj = {
+const obj = {
     a: {
         b: {
             c: 'd'

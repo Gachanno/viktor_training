@@ -1,6 +1,7 @@
+"use strict";
 function invert(obj) {
-    var invertedObj = {};
-    for (var key in obj)
+    const invertedObj = {};
+    for (const key in obj)
         invertedObj[obj[key]] = key;
     return invertedObj;
 }
