@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "qunit"
+    "test": "qunit",
+    "ts:run": "tsc -w"
   },
   "devDependencies": {
     "qunit": "^2.24.1"

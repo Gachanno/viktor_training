@@ -1,5 +1,5 @@
-function invert(obj:Object) {
-    const invertedObj = {}
+function invert(obj: Record<string, any>): Record<string, string> {
+    const invertedObj: Record<string, string> = {}
     for(const key in obj) invertedObj[obj[key]] = key
     return invertedObj
 }
